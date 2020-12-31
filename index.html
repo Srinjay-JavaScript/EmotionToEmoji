@@ -1,0 +1,88 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      
+    <h1 class="btn btn-warning"><b style="font-size: 23px; font-family: 'Oxygen', sans-serif; letter-spacing: 10px;" >EMOTION TO EMOJI APP</b>
+      <br>
+      <span>&#128522;</span>
+      <span>&#128512;</span>
+      <span>&#128532;</span>
+      <span>&#128546;</span>
+      <span>&#128545;</span>
+      <span>&#128548;</span>
+    </h1>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: yellow">Are you Happy?</b>
+        <br>
+        <b style="color: black">Are you Sad?</b>
+        <br>
+        <b style="color: red">Are you Angry?</b>
+        <br>
+        
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label style="color: black; letter-spacing: 10px; font-size: 20px;">LIVE WEBCAM</label>
+        <div style=" box-shadow: 5px 5px 5px 5px gray; border-radius: 20px; " class="btn btn-warning">
+        <div id="result"></div>
+        <br>
+      <button onclick="take_snap()" style=" height: 50px; color: black; background-color: lightblue; border-radius: 25px; border-width: 3px; border-color: black; font-weight: bolder; letter-spacing: 10px; margin-bottom: 15px;">TAKE PHOTO</button></div>
+    </div>
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div>
+        <h4 class="btn btn-default" style="letter-spacing: 10px; font-weight: bold; color: black;">PREDICTION 1: </h4>
+        <p style="color: black;" id="emname" class="emotion_name"></p>
+        <p id="emoji" class="emoji"></p>
+      </div>
+      <div>
+        <h4 class="btn btn-default" style="letter-spacing: 10px; font-weight: bold; color: black;">PREDICTION 2: </h4>
+        <p style="color: black;" id="emname2" class="emotion_name"></p>
+        <p id="emoji2" class="emoji"></p>
+      </div>
+    </div>
+    
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+      <label style="color: black; letter-spacing: 10px; font-size: 20px;">PHOTO TAKEN</label>
+        <div style="border-radius: 20px; " class="btn btn-warning">
+        <div id="photo"></div>
+        <br>
+      <button style="height: 50px; color: black; background-color: lightblue; border-radius: 25px; border-width: 3px; border-color: black; font-weight: bolder; letter-spacing: 10px; margin-bottom: 15px;" onclick="predict()">PREDICT EMOJI</button></div>
+	     </div>
+
+        <br><br>
+
+     
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
